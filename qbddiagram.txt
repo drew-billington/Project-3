@@ -1,0 +1,59 @@
+Sales
+-
+ProductKey INT FK >- Products.ProductKey
+OrderDate DATE
+CustomerKey INT FK >- Customers.AltCustomerKey
+SalesTerritoryKey INT
+SalesOrderNumber VARCHAR
+SalesOrderLineNumber INT
+OrderQuantity INT
+DiscountAmount FLOAT
+ProductStandardCost FLOAT
+SalesAmount FLOAT
+Territories.Region VARCHAR
+Territories.Country VARCHAR
+Territories.Continent VARCHAR
+
+Products
+-
+ProductKey INT PK 
+EnglishProductName VARCHAR
+StandardCost FLOAT
+FinishedGoodsFlag VARCHAR
+Color VARCHAR
+ListPrice FLOAT
+Size VARCHAR
+ProductLine VARCHAR
+DealerPrice FLOAT
+Class VARCHAR
+Style VARCHAR
+ModelName VARCHAR
+StartDate DATE
+EndDate DATE
+Status VARCHAR
+Subcategory VARCHAR FK >- ProductCategories.Subcategory
+
+ProductCategories
+-
+Subcategory VARCHAR PK
+Category VARCHAR
+
+Customers
+-
+CustomerKey INT  
+AltCustomerKey INT PK
+FirstName VARCHAR
+LastName VARCHAR
+BirthDate DATE
+MaritalStatus VARCHAR(1)
+Gender VARCHAR(1)
+EmailAddress VARCHAR
+YearlyIncome INT
+TotalChildren INT
+EnglishEducation VARCHAR
+EnglishOccupation VARCHAR
+HouseOwnerFlag BOOLEAN
+NumberCarsOwned INT
+AddressLine1 VARCHAR
+DateFirstPurchase DATE
+CommuteDistance VARCHAR
